@@ -1,0 +1,21 @@
+version: "3.5"
+
+services:
+  apollo:
+    image: nichealpham95/ryo:apollo
+    ports:
+      - 4000:4000
+    networks:
+      - shared_network
+    restart: always
+
+  browser:
+    image: nichealpham95/ryo:browser
+    ports:
+      - 3000:3000
+    networks:
+      - shared_network
+    restart: always
+
+networks:
+  shared_network:
