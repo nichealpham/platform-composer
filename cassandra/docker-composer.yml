@@ -1,0 +1,57 @@
+version: "3.5"
+
+services:
+  api-console:
+    image: nichealpham95/cassandra:api-console
+    ports:
+      - 4000:4000
+    restart: always
+    env_file:
+      - ./.env
+
+  api-user:
+    image: nichealpham95/cassandra:api-user
+    ports:
+      - 4001:4001
+    restart: always
+    env_file:
+      - ./.env
+
+  api-analysis:
+    image: nichealpham95/cassandra:api-analysis
+    ports:
+      - 4002:4002
+    restart: always
+    env_file:
+      - ./.env
+
+  api-record:
+    ports:
+      - 4004:4004
+    restart: always
+    env_file:
+      - ./.env
+
+  api-analytic:
+    image: nichealpham95/cassandra:api-analytic
+    ports:
+      - 4005:4005
+    restart: always
+    env_file:
+      - ./.env
+
+  api-stream:
+    image: nichealpham95/cassandra:api-stream
+    ports:
+      - 4007:4007
+    restart: always
+    env_file:
+      - ./.env
+
+  api-report:
+    image: nichealpham95/cassandra:api-report
+    ports:
+      - 4008:4008
+    restart: always
+    env_file:
+      - ./.env
